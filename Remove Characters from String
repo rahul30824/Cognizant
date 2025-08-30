@@ -1,0 +1,27 @@
+import java.util.HashSet;
+class Main
+{
+public static String Solution(String str1,String str2)  
+{
+    StringBuilder result=new StringBuilder();
+    HashSet<Character>set=new HashSet<>();
+    for(char num:str1.toCharArray())
+    {
+        set.add(num);
+    }
+    for(char num2:str2.toCharArray())
+    {
+        if(!set.contains(num2))
+    {
+        result.append(num2);
+    }
+    }
+    return result.toString();
+}
+public static void main(String[] args)
+{
+    String str1="cat";
+    String str2="computer";
+    System.out.print(Solution(str1,str2));
+}
+}
